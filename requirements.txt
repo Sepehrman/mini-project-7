@@ -1,0 +1,14 @@
+Core Requirements:
+Python 3.9 or above
+pip (Pip Installs Packages) - For installation of runtime Python Libraries
+Dataset: Roboflow Brain Tumor Detection Dataset - Downloaded automatically via Roboflow API 
+(https://universe.roboflow.com/yousef-ghanem-jzj4y/brain-tumor-detection-fpf1f)
+Core Python/pip libraries:
+   - ultralytics
+   - roboflow
+   - numpy
+   - matplotlib
+   - Pillow
+   - pyyaml
+Environment:
+   - Jupyter (or notebook / jupyterlab) for runtime environment for running .ipynb files
