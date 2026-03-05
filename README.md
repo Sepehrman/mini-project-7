@@ -184,6 +184,13 @@ The notebook provides:
 * Visualize at least 6 prediction examples on validation images - Sepehr Mansouri & Ledja Halltari
 * Include training curves (loss and mAP over epochs) - Ledja Halltari & Sepehr Mansouri
 
+---
+
+## 📊 Model Analysis
+
+The dataset exhibits reasonable class balance across glioma, meningioma, and pituitary tumors, though glioma detection shows the weakest performance with the lowest AP@50 (0.7157) and recall (0.6340), likely due to more variable MRI presentations or fewer distinct features compared to the other classes. For clinical use, a low confidence threshold (0.10-0.25) is recommended for screening to minimize false negatives, as missing tumors is more dangerous than false positives in medical diagnosis. The model struggles most with glioma classification, possibly due to overlapping visual characteristics with other tumors or dataset limitations. In this medical context, false negatives pose greater risk than false positives, as undetected tumors could delay treatment. For business deployment, the model shows promise but is not yet accurate enough for clinical use; improvements would require larger, more balanced datasets, data augmentation, and validation on diverse patient populations to achieve higher reliability.
+
+---
 
 ##  References
 
