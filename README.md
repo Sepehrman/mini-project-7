@@ -150,6 +150,19 @@ Given the medical context where missing tumors is more dangerous than false alar
 
 **Recommended Use**: Clinical decision-support tool to assist radiologists rather than autonomous diagnosis system.
 
+## Results: 
+# TRAINING CURVES — LOSS & mAP OVER EPOCHS :
+![alt text](data/images/image.png)
+
+# Confusion Matrix 
+![alt text](data/images/confusion_matrix.png)
+
+# YOLO predictions on validation images 
+![alt text](data/images/yolo_on_validation.png)
+
+
+
+
 ### Future Improvements
 
 1. **Dataset Enhancement**:
@@ -180,7 +193,6 @@ Evaluate with mAP@50, mAP@50-95, precision, and recall - Ledja Halltari & Sepehr
 Show per-class metrics and confusion matrix - Ledja Halltari
 Visualize at least 6 prediction examples on validation images - Sepehr Mansouri & Ledja Halltari
 Include training curves (loss and mAP over epochs) - Ledja Halltari & Sepehr Mansouri
-
 
 
 ## Acknowledgments
