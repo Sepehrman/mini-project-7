@@ -1,11 +1,11 @@
-# 🧠 Brain Tumor Detection with YOLOv8
+# 🧠 Brain Tumor Detection with YOLO26
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
-![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-orange)
+![YOLO26](https://img.shields.io/badge/YOLO26-Ultralytics-orange)
 ![Dataset](https://img.shields.io/badge/Dataset-Roboflow-purple)
 ![Task](https://img.shields.io/badge/Task-Object%20Detection-green)
 
-A deep learning object detection pipeline for detecting and classifying brain tumors in MRI scans using YOLOv8 (Ultralytics). The model is trained to identify three clinically significant tumor types: **Glioma**, **Meningioma**, and **Pituitary** tumors.
+A deep learning object detection pipeline for detecting and classifying brain tumors in MRI scans using YOLO26 (Ultralytics). The model is trained to identify three clinically significant tumor types: **Glioma**, **Meningioma**, and **Pituitary** tumors.
 
 ## 📁 Project Structure
 
@@ -35,7 +35,7 @@ mini-project-7/
 
 Brain tumors are among the most critical and time-sensitive conditions in medicine. Early and accurate detection directly impacts patient survival rates. Manual analysis of MRI scans is time-consuming and subject to human error.
 
-This project builds an **automated object detection system** using YOLOv8 that can:
+This project builds an **automated object detection system** using YOLO26 that can:
 * Localize tumor regions in MRI scans with bounding boxes
 * Classify the tumor type across 3 categories
 * Operate at high confidence with measurable precision and recall
@@ -45,7 +45,7 @@ This project builds an **automated object detection system** using YOLOv8 that c
 | Property | Details |
 |----------|---------|
 | **Source** | [Roboflow Universe — Brain Tumor Detection](https://universe.roboflow.com/yousef-ghanem-jzj4y/brain-tumor-detection-fpf1f) |
-| **Format** | YOLOv8 |
+| **Format** | YOLO26 |
 | **Classes** | 3 (Glioma, Meningioma, Pituitary) |
 | **Train images** | 20,330 |
 | **Validation images** | 1,980 |
@@ -65,7 +65,6 @@ Brain tumor segmentation from MRI images is a high-impact medical imaging task; 
 
 The dataset used for this project was provided by Roboflow (workspace `yousef-ghanem-jzj4y`, project `brain-tumor-detection-fpf1f`, version 1). It comprises labeled MRI images across multiple tumor categories—including glioma, meningioma, pituitary adenoma. Images are organized in YOLO format with `train/`, `valid/`, and `test/` splits.
 
----
 
 ---
 
@@ -87,7 +86,7 @@ The dataset used for this project was provided by Roboflow (workspace `yousef-gh
 3. **Open and execute the notebook**
 	Launch `notebooks/notebook.ipynb` in JupyterLab, VS Code, or Google Colab. Running the cells sequentially will:
 	- download the dataset from Roboflow
-	- load a COCO-pretrained `yolov8n.pt` model
+	- load a COCO-pretrained `YOLO26n.pt` model
 	- fine-tune for at least 25 epochs (this parameter may be increased)
 	- evaluate on the validation split, reporting mAP@50, mAP@50–95, precision, and recall
 	- display per-class metrics, confusion matrix, and sample predictions
@@ -97,11 +96,11 @@ The dataset used for this project was provided by Roboflow (workspace `yousef-gh
 
 ##  Training
 
-The model was fine-tuned from pretrained `yolov8n.pt` weights on the brain tumor dataset.
+The model was fine-tuned from pretrained `YOLO26n.pt` weights on the brain tumor dataset.
 
 | Parameter | Value |
 |-----------|-------|
-| **Model** | YOLOv8n (Nano) |
+| **Model** | YOLO26n (Nano) |
 | **Epochs** | 25 |
 | **Image size** | 640×640 |
 | **Batch size** | 16 |
@@ -135,23 +134,21 @@ The model was fine-tuned from pretrained `yolov8n.pt` weights on the brain tumor
 
 Loss and mAP tracked over 25 epochs. Both box loss and classification loss decrease steadily, while mAP@50 and mAP@50-95 improve consistently — indicating healthy convergence with no signs of overfitting.
 
-![alt text](image-3.png)
+![alt text](data/images/image-3.png)
 ---
 
 ##  Confusion Matrix
 
 The confusion matrix shows per-class prediction accuracy across the validation set. Strong diagonal values indicate the model reliably distinguishes between tumor types.
 
-![alt text](image-1.png)
----
+![alt text](data/images/image-1.png)
 
----
 
 ##  Sample Predictions
 
-YOLOv8 predictions on 6 diverse validation images, sampled evenly across the full validation set to ensure variety.
+YOLO26 predictions on 6 diverse validation images, sampled evenly across the full validation set to ensure variety.
 
-![alt text](image-2.png)
+![alt text](data/images/image-2.png)
 ---
 
 ## 🔍 Confidence Threshold Analysis
@@ -179,20 +176,24 @@ The notebook provides:
 
 ##  Team Member Contributions
 
-Use YOLO26 (Ultralytics) for all detection tasks  - Ledja Halltari 
-Start from pre-trained COCO weights (YOLOv8) - Sepehr Mansouri 
-Train for a minimum of 25 epochs (experiment with more) - Sepehr Mansouri
-Evaluate with mAP@50, mAP@50-95, precision, and recall - Ledja Halltari & Sepehr Mansouri
-Show per-class metrics and confusion matrix - Ledja Halltari
-Visualize at least 6 prediction examples on validation images - Sepehr Mansouri & Ledja Halltari
-Include training curves (loss and mAP over epochs) - Ledja Halltari & Sepehr Mansouri
+* Use YOLO26 (Ultralytics) for all detection tasks  - Ledja Halltari 
+* Start from pre-trained COCO weights (YOLO26) - Sepehr Mansouri 
+* Train for a minimum of 25 epochs (experiment with more) - Sepehr Mansouri
+* Evaluate with mAP@50, mAP@50-95, precision, and recall - Ledja Halltari & Sepehr Mansouri
+* Show per-class metrics and confusion matrix - Ledja Halltari
+* Visualize at least 6 prediction examples on validation images - Sepehr Mansouri & Ledja Halltari
+* Include training curves (loss and mAP over epochs) - Ledja Halltari & Sepehr Mansouri
 
+---
 
-(Substitute actual names as appropriate.)
+## 📊 Model Analysis
 
+The dataset exhibits reasonable class balance across glioma, meningioma, and pituitary tumors, though glioma detection shows the weakest performance with the lowest AP@50 (0.7157) and recall (0.6340), likely due to more variable MRI presentations or fewer distinct features compared to the other classes. For clinical use, a low confidence threshold (0.10-0.25) is recommended for screening to minimize false negatives, as missing tumors is more dangerous than false positives in medical diagnosis. The model struggles most with glioma classification, possibly due to overlapping visual characteristics with other tumors or dataset limitations. In this medical context, false negatives pose greater risk than false positives, as undetected tumors could delay treatment. For business deployment, the model shows promise but is not yet accurate enough for clinical use; improvements would require larger, more balanced datasets, data augmentation, and validation on diverse patient populations to achieve higher reliability.
+
+---
 
 ##  References
 
-- [Ultralytics YOLOv8 Documentation](https://docs.ultralytics.com)
+- [Ultralytics YOLO26 Documentation](https://docs.ultralytics.com)
 - [Roboflow Brain Tumor Detection Dataset](https://universe.roboflow.com/yousef-ghanem-jzj4y/brain-tumor-detection-fpf1f)
 - [YOLO: Real-Time Object Detection](https://arxiv.org/abs/1506.02640)
