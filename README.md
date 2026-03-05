@@ -65,7 +65,6 @@ Brain tumor segmentation from MRI images is a high-impact medical imaging task; 
 
 The dataset used for this project was provided by Roboflow (workspace `yousef-ghanem-jzj4y`, project `brain-tumor-detection-fpf1f`, version 1). It comprises labeled MRI images across multiple tumor categories—including glioma, meningioma, pituitary adenoma. Images are organized in YOLO format with `train/`, `valid/`, and `test/` splits.
 
----
 
 ---
 
@@ -135,23 +134,21 @@ The model was fine-tuned from pretrained `yolov8n.pt` weights on the brain tumor
 
 Loss and mAP tracked over 25 epochs. Both box loss and classification loss decrease steadily, while mAP@50 and mAP@50-95 improve consistently — indicating healthy convergence with no signs of overfitting.
 
-![alt text](image-3.png)
+![alt text](data/images/image-3.png)
 ---
 
 ##  Confusion Matrix
 
 The confusion matrix shows per-class prediction accuracy across the validation set. Strong diagonal values indicate the model reliably distinguishes between tumor types.
 
-![alt text](image-1.png)
----
+![alt text](data/images/image-1.png)
 
----
 
 ##  Sample Predictions
 
 YOLOv8 predictions on 6 diverse validation images, sampled evenly across the full validation set to ensure variety.
 
-![alt text](image-2.png)
+![alt text](data/images/image-2.png)
 ---
 
 ## 🔍 Confidence Threshold Analysis
@@ -179,16 +176,13 @@ The notebook provides:
 
 ##  Team Member Contributions
 
-Use YOLO26 (Ultralytics) for all detection tasks  - Ledja Halltari 
-Start from pre-trained COCO weights (YOLOv8) - Sepehr Mansouri 
-Train for a minimum of 25 epochs (experiment with more) - Sepehr Mansouri
-Evaluate with mAP@50, mAP@50-95, precision, and recall - Ledja Halltari & Sepehr Mansouri
-Show per-class metrics and confusion matrix - Ledja Halltari
-Visualize at least 6 prediction examples on validation images - Sepehr Mansouri & Ledja Halltari
-Include training curves (loss and mAP over epochs) - Ledja Halltari & Sepehr Mansouri
-
-
-(Substitute actual names as appropriate.)
+* Use YOLO26 (Ultralytics) for all detection tasks  - Ledja Halltari 
+* Start from pre-trained COCO weights (YOLOv8) - Sepehr Mansouri 
+* Train for a minimum of 25 epochs (experiment with more) - Sepehr Mansouri
+* Evaluate with mAP@50, mAP@50-95, precision, and recall - Ledja Halltari & Sepehr Mansouri
+* Show per-class metrics and confusion matrix - Ledja Halltari
+* Visualize at least 6 prediction examples on validation images - Sepehr Mansouri & Ledja Halltari
+* Include training curves (loss and mAP over epochs) - Ledja Halltari & Sepehr Mansouri
 
 
 ##  References
