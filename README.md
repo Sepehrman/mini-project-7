@@ -166,7 +166,7 @@ Given the medical context where missing tumors is more dangerous than false alar
 ![alt text](data/images/metrics.png)
 
 ### Confusion Matrix 
-![alt text](data/images/confusion_matrix2.png)
+![alt text](data/images/confusion_matrix_2.png)
 
 ### YOLO predictions on validation images 
 ![alt text](data/images/yolo_on_validation_2.png)
