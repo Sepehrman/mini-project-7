@@ -150,18 +150,26 @@ Given the medical context where missing tumors is more dangerous than false alar
 
 **Recommended Use**: Clinical decision-support tool to assist radiologists rather than autonomous diagnosis system.
 
-## Results: 
-# TRAINING CURVES — LOSS & mAP OVER EPOCHS :
+## Results for Image Size 640×640, Batch Size 16: 
+### Training curves — Loss & mAP over epochs:
 ![alt text](data/images/image.png)
 
-# Confusion Matrix 
+### Confusion Matrix 
 ![alt text](data/images/confusion_matrix.png)
 
-# YOLO predictions on validation images 
+### YOLO predictions on validation images 
 ![alt text](data/images/yolo_on_validation.png)
 
+## Results for Image Size 416×416, Batch Size 8"
 
+### Training curves — Loss & mAP over epochs:
+![alt text](data/images/metrics.png)
 
+### Confusion Matrix 
+![alt text](data/images/confusion_matrix2.png)
+
+### YOLO predictions on validation images 
+![alt text](data/images/yolo_on_validation_2.png)
 
 ### Future Improvements
 
@@ -171,7 +179,7 @@ Given the medical context where missing tumors is more dangerous than false alar
    - Include more diverse MRI sequences
 
 2. **Model Optimization**:
-   - Experiment with larger YOLO26 variants (S/M/L)
+   - Experiment with larger YOLO26 variants 
    - Implement class-weighted training
    - Fine-tune confidence thresholds for medical use
 
@@ -187,12 +195,12 @@ The YOLO26-based brain tumor detection system demonstrates promising performance
 ## Team Member Contributions
 
 #### Use YOLO26 (Ultralytics) for all detection tasks - Ledja Halltari
-Start from pre-trained COCO weights (YOLOv8) - Sepehr Mansouri
-Train for a minimum of 25 epochs (experiment with more) - Sepehr Mansouri
-Evaluate with mAP@50, mAP@50-95, precision, and recall - Ledja Halltari & Sepehr Mansouri
-Show per-class metrics and confusion matrix - Ledja Halltari
-Visualize at least 6 prediction examples on validation images - Sepehr Mansouri & Ledja Halltari
-Include training curves (loss and mAP over epochs) - Ledja Halltari & Sepehr Mansouri
+#### Start from pre-trained COCO weights (YOLOv8) - Sepehr Mansouri
+#### Train for a minimum of 25 epochs (experiment with more) - Sepehr Mansouri
+#### Evaluate with mAP@50, mAP@50-95, precision, and recall - Ledja Halltari & Sepehr Mansouri
+#### Show per-class metrics and confusion matrix - Ledja Halltari
+#### Visualize at least 6 prediction examples on validation images - Sepehr Mansouri & Ledja Halltari
+#### Include training curves (loss and mAP over epochs) - Ledja Halltari & Sepehr Mansouri
 
 
 ## Acknowledgments
