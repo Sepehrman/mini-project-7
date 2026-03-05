@@ -186,7 +186,7 @@ The YOLO26-based brain tumor detection system demonstrates promising performance
 
 ## Team Member Contributions
 
-Use YOLO26 (Ultralytics) for all detection tasks - Ledja Halltari
+#### Use YOLO26 (Ultralytics) for all detection tasks - Ledja Halltari
 Start from pre-trained COCO weights (YOLOv8) - Sepehr Mansouri
 Train for a minimum of 25 epochs (experiment with more) - Sepehr Mansouri
 Evaluate with mAP@50, mAP@50-95, precision, and recall - Ledja Halltari & Sepehr Mansouri
